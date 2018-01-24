@@ -1,0 +1,99 @@
+\documentclass[10pt]{article}
+\usepackage{typoday18}
+
+\title{Spiral splines in typeface design - A case study of Manjari Malayalam typeface}
+
+\author{ 
+ Santhosh Thottingal
+  \and
+ Kavya Manohar
+}
+ 
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Malayalam script, since its journey from Brahmi writing style through Vattezhuthu and Grantha writing systems to the digital typefaces of modern era, has undergone a lot of changes. The noticeable aesthetic feature of contemporary script is its loops and curly strokes. But during the early days of printing, in 19th century it was more rectangular with less curvy strokes. In the next century metal types with more circular curves started to appear in the print. Horizontal symmetry for many letters like {\rachana {ക, ത, ന}} became an identity for the script.
+
+Manjari typeface was an experiment to use spiral splines to define the curves of Malayalam glyphs to achieve the next version of the above mentioned progression towards rounded glyphs. The design of curves in Manjari are theoretically based on the PhD thesis by Raph Levien - “From Spiral to Spline: Optimal Techniques in Interactive Curve Design”\footnote{\url{http://www.levien.com/phd/}}. The design process relied almost entirely on the spiro toolbox developed  by Levian himself, available as free software library in Inkscape vector graphics editor.
+
+The use of spiral spline curves resulted in shapes that are extra smooth. The spiral smoothness of curves are complemented by rounded terminals which gives very soft feeling for the eyes. The rigidness of geometric fonts is completely avoided and  the Manjari font has a good humanist identity. The curve perfection resulted in negative spaces that aquired beautiful leaf and drop shapes between the bowls and loops of the script.
+In this paper we present the design principles and aesthetic concepts behind this font along with a perspective on the evolution of script aesthetics from the ancient Vattezhuthu, through early and contemporary printing to digital fonts.
+\end{abstract}
+ \textbf{Keywords:} Malayalam, Script, Spirals, Opentype, Typeface, Digital Typography
+
+\section{Introduction- 5 \% of content here}
+
+Luctus mauris est sit nunc vehicula. Aliquam lacus in. Donec integer odio. Libero tincidunt arcu est eget pede. Arcu metus quisque in eget sociis. Neque elementum a purus elit libero. Velit nulla hac. Eros cras laoreet. Sit risus imperdiet. Etiam pellentesque nullam aenean dis pulvinar tincidunt sit nulla nunc sit eu et massa est. Pellentesque et nunc. Nam ipsum wisi imperdiet parturient sit pede non mauris. Proin lectus in. Ultricies vel per. Nonummy lectus quis ut laoreet per blandit ac pulvinar. Nec metus dui vivamus et lorem semper rhoncus id. Wisi nulla donec cras ac erat vel fusce arcu. Eu turpis dolor ultricies sed lacinia. Ac mattis id. Wisi erat et amet mus wisi pellentesque phasellus nullam a inventore lectus.
+
+\section{Evolutionary Path of the script-15\% of content here}
+
+\subsection{Brahmi, Grantha and Vattezhuthu}
+
+Period of these scripts, samples- any noticable characteristics
+
+\subsection{Printing Era}
+
+1773- Roman types: Rectangular- samples.
+More straight lines and elongated curves. 
+1824-29: Baileys  rounded types. Metal types started to give uniform height proportions to the script.
+
+This shift can be easily understood when a a fine handwriting is often referred as {\manjari {അവൾക്കു നല്ല ഉരുണ്ട കയ്യക്ഷരമുണ്ട്} } (She has a fine round shaped handwriting).
+
+
+\subsection{Digital typefaces}
+
+ASCII based non-standard samples. (Added based on some discussion in {\manjari കമ്പിയില്ലാക്കമ്പി} on the infographics made) 
+
+Unicode fonts for regular use: Meera, Anjali - early popular ones.  Their rounded characteristic curves, but sharp edges
+
+Manjari- 2016. Curvature has maximally spiral features. rounded terminals.  Ever since the typeface was released in July 2016, it became one of the top used unicode typeface for Malayalam. Manjari is available in 3 style variants and available publicly under free software license. 
+
+\section{Curve Interpolation by Spiral splines - 25 \% of content}
+
+Curve interpolation.
+
+Different types of interpolation- Mathematical characterisics
+
+Special features of spiral spline- Sample Images
+
+Ralph Levian studies and results. 
+
+The Inconsolata monospace humanist latin font known for its clean lines and elegant design by Levien himself is based on this theory.
+
+\paragraph{Fonts variants by interpolation}
+Many interpolating splines in the literature are used for generating variations in fonts, rather
+than a single static shape. Since fonts are desired in a wide range of weights, one of the more
+common applications is to generate these continuously. One of the most straightforward techniques,
+pioneered by Ikarus [42], is to start with two masters with similar structure, representing thin
+and thick extremes, and linearly interpolate the positions of the control points between the two.
+Then, an interpolating spline is fit through these control points. Note that there are two senses of
+interpolation here – one for the control points, another for the spline." 
+
+
+\section{Manjari and its Spiral features - 35 \% of content}
+
+Curves Defined by spiral interpolation
+
+Round edges: Smooth feeling
+
+Equal widtn stroke
+
+\subsection{Beutiful features in the negative spaces}
+
+Sample images.
+
+\section{Free software tools- 10 \%}
+
+Spiro library by Ralph Levian.
+
+Incorporation in inkscape
+
+Version controlled, open source work flow.
+
+\section{Conclusion- 10 \%}
+
+\end{document}
