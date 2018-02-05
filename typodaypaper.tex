@@ -76,21 +76,46 @@ The accepatance of this style of roundness can be easily understood when a fine 
 
 \subsection{Digital typefaces}
 
-ASCII based non-standard samples. (Added based on some discussion in {\manjari കമ്പിയില്ലാക്കമ്പി} on the infographics made) 
+Digital typefaces of  Malayalam script introduced during 19s were non-standard ones. These fonts were based on ASCII encoding, with script mapped to Malayalam glyph set. Malayalam was not encoded in unicode until 2001. This non-standard work around became popular in the publishing industry, and a huge variety of typefaces were designed for this technology. The fonts that got popular in regular printing were mostly rounded. See Figure.\ref{maltextbook}
 
-Unicode fonts for regular use: Meera, Anjali - early popular ones.  Their rounded characteristic curves, but sharp edges
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/2011-Malayalam-Textbook.png}
+	\caption{Malayalam Text book in 2011}
+	\label{maltextbook}
+\end{figure}
 
-Manjari- 2016. Curvature has maximally spiral features. rounded terminals.  Ever since the typeface was released in July 2016, it became one of the top used unicode typeface for Malayalam. Manjari is available in 3 style variants and available publicly under free software license. 
+ 
+ The most popular unicode fonts since their release in the late 2000s:  Rachana, Meera and Anjali continued to follow roundeness as their glyph characteristic. 
 
-\section{Curve Interpolation by Spiral splines - 25 \% of content}
+ 
+ Manjari unicode font was released in 2016,  under free software license with three style variants - regular, thin and bold. Ever since the typeface was released in July 2016, it became one of the top used unicode typeface for Malayalam. The curves in Manjari are designed to follow a spiral shaped path between its control points and the terminals are rounded. See Figure.\ref{manjari-ka}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/Manjari-Ka.png}
+	\caption{Drawing of letter {\manjari ക} in Manjari font}
+	\label{manjari-ka}
+\end{figure} 
+ 
+ The following section describes mathematics of the curves that define Manjari. 
+ 
 
-Curve interpolation.
 
-Different types of interpolation- Mathematical characterisics
+\section{Curve Interpolation by Spiral splines}
 
-Special features of spiral spline- Sample Images
+Curves that passes through data points in a sequence can be termed interpolating splines. A good interpolating spline is a smooth curve that results from sparse data points. There are a huge variety  of interpolating curves. As mentioned earlier, the nature of smooth interpolating splines have been studied by Ralph Levian in his thesis : “From Spiral to Spline: Optimal Techniques in Interactive Curve Design”\cite{levian}.
 
-Ralph Levian studies and results. 
+According to Levian, spiral spline curves have certain characteristics which make them particularly suitable for two dimensional curve fitting. When spiral spline curves are used for interpolation, three data points on a circular path would yield that exact circle after interpolation: this is the property of roundness. When a new control point is introduced on the interpolated spline between two points, the curve shape would be preserved: this is the property of extensionality. Additionally the spiral spline curves can be defined with curvature countinuity upto fourth order. Even a second order continuity of curvature at data points will be sufficient for good perceptive smoothness.
+
+Every curve segment in a second order continuous interpolating spiral spline between adjacent control points can be cut from an Euler’s spiral subjecting to rotation, scaling, translation and mirror image transformations. Levian calls Euler’s spiral as the generating curve for spiral splines. Euler’s spiral is a spiral whose curvature changes linearly with its curve length. See Figure.\ref{eulerspiral}. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/Euler_spiral.png}
+	\caption{Euler Spiral}
+	\label{eulerspiral}
+\end{figure}
+
 
 The Inconsolata monospace humanist latin font known for its clean lines and elegant design by Levien himself is based on this theory.
 
@@ -131,7 +156,7 @@ Version controlled, open source work flow.
 \begin{thebibliography}{99}
 	\bibitem{babucherian} Babu Cheriyan, \textit{Benjamin Bailiyum Malayala Sahithyavum} {\manjari{(ബെഞ്ചമിൻ ബെയിലിയും മലയാള സാഹിത്യവും}) }, Mahatma Gandhi University, Kottayam, 2008
 	\bibitem{gupthannair} S. Gupthan Nair, \textit{Gadyam Pinnitta Vazhikal}{\manjari{ (ഗദ്യം പിന്നിട്ട വഴികൾ)} }, DC Books, Kottayam 
-
+\bibitem{levian}  Raphael Linus Levien,  \textit{From Spiral to Spline: Optimal Techniques in Interactive Curve Design}, EECS Department, University of California, Berkeley, 2009
 	
 \end{thebibliography}
 
