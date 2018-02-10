@@ -20,7 +20,7 @@ Manjari typeface was an experiment to use spiral splines to define the curves of
 
 The design of curves in Manjari are theoretically based on the PhD thesis by Raph Levien - ``From Spiral to Spline: Optimal Techniques in Interactive Curve Design” \cite{levien}. The design process relied almost entirely on the spiro toolbox developed by Levien himself, available as free software library in Inkscape vector graphics editor.
 
-The use of spiral spline curves resulted in shapes that are extra smooth. The spiral smoothness of curves are complemented by rounded terminals which gives very soft feeling for the eyes. The rigidness of geometric fonts is completely avoided giving a good humanist identity. The curve perfection resulted in negative spaces that aquired beautiful leaf and drop shapes between the bowls and loops of the script. 
+The use of spiral spline curves resulted in shapes that are extra smooth. The spiral smoothness of curves are complemented by rounded terminals which gives very soft feeling for the eyes. The rigidness of geometric fonts is completely avoided giving a good humanist identity. The curve perfection resulted in negative spaces that acquired beautiful leaf and drop shapes between the bowls and loops of the script. 
 
 In this paper we present the design principles and aesthetic concepts behind this font along with a perspective on the evolution of script aesthetics from the ancient writing systems, through early and contemporary printing to digital fonts. We will also discuss the popularity and adoption of Manjari in the digital as well as print media.
 \end{abstract}
@@ -112,9 +112,38 @@ According to Levien, spiral spline interpolating curves have certain characteris
 	\item \textbf{Extensionality Property}: When a new control point is introduced on the interpolated spline between two points, the curve shape would be preserved.
 \end{itemize}
 
-Geometric continuity is an essential feature indicating the smoothness of interpolating curves between control points. The basic propert of connected curves is $G^0$ continuity, ie. curves touch at join points. An interpolating curve of better smoothness has $G^1$ continuity, meaning the tangents on either sides of join points are essentially the same. A still higher order smoothenss is offered by $G^2$ continuous curves, having a common centre of curvature at the join points. 
+Geometric continuity is an essential feature indicating the smoothness of interpolating curves between control points. The basic property of connected curves is $G^0$ continuity, ie. curves touch at join points. An interpolating curve of better smoothness has $G^1$ continuity, meaning the tangents on either sides of join points are essentially the same. A still higher order smoothness is offered by $G^2$ continuous curves, having a common center of curvature at the join points. 
+
 Spiral splines can be defined with $G^2$ continuity indicating very smooth variation in curvature. 
- 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/disjoint.png}
+	\caption{Disjoint curves. No continuity.}
+	\label{disjoint}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/g0.png}
+	\caption{$G_0$ continuity. Curves will be continues but there is visible stop point.}
+	\label{g0}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/g1.png}
+	\caption{$G_1$ continuity. The tangents on either sides of join points are essentially the same. Curves will be appear smooth. But there may be sudden changes in the path.}
+	\label{g1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/g2.png}
+	\caption{$G^2$ continuous curves, having a common center of curvature at the join points. The Spiro library in Inkscape generates $G^2$ curves and same is used for Manjari font.}
+	\label{g2}
+\end{figure}
+
 Levien proposes that \textit{every curve segment in a two parameter,  $G^2$ continuous interpolating spiral spline between adjacent control points can be cut from an Euler spiral subjecting to rotation, scaling, translation and mirror image transformations}. He calls Euler spiral as the generating curve for spiral splines. Euler spiral has a curvature that changes linearly with its curve length. See Figure \ref{eulerspiral} for a Euler spiral.
 
 
@@ -171,19 +200,11 @@ The design of Manjari font was done using free software tools in GNU/Linux opera
 
 Manjari is equal thickness typeface. So bold, thin variants prepared by just varying the stroke with in Inkscape, while stroke is controlled by the curves from Spiro. The outline terminals were set to use round shapes, that complements the smoothness in outlines.
 
-\section{Manjari and its Spiral features - 35 \% of content}
-
-Curves Defined by spiral interpolation
-
-Round edges: Smooth feeling
-
-Equal widtn stroke
-
-\newpage
-
 \section{Specimen}
 
 \includegraphics[width=\textwidth]{images/Manjari-Specimen.pdf}
+
+\section{Popularity}
 
 \section{Conclusion}
 sds
