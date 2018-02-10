@@ -89,13 +89,13 @@ Digital typefaces of  Malayalam script introduced during 19s were non-standard o
  The most popular unicode fonts since their release in the late 2000s:  Rachana, Meera and Anjali continued to follow roundeness as their glyph characteristic. 
 
  
- Manjari unicode font was released in 2016,  under free software license with three style variants - regular, thin and bold. Ever since the typeface was released in July 2016, it became one of the top used unicode typeface for Malayalam. The curves in Manjari are designed to follow a spiral shaped path between its control points and the terminals are rounded. See Figure.\ref{manjari-ka}.
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\textwidth]{images/Manjari-Ka.png}
-	\caption{Drawing of letter {\manjari ക} in Manjari font}
-	\label{manjari-ka}
-\end{figure} 
+ Manjari unicode font was released in 2016,  under free software license with three style variants - regular, thin and bold. Ever since the typeface was released in July 2016, it became one of the top used unicode typeface for Malayalam. The curves in Manjari are designed to follow a spiral shaped path between its control points and the terminals are rounded. %See Figure.\ref{manjari-ka}.
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.8\textwidth]{images/Manjari-Ka.png}
+%	\caption{Drawing of letter {\manjari ക} in Manjari font}
+%	\label{manjari-ka}
+%\end{figure} 
  
  The following section describes mathematics of the curves that define Manjari. 
  
@@ -103,16 +103,18 @@ Digital typefaces of  Malayalam script introduced during 19s were non-standard o
 
 \section{Curve Interpolation by Spiral splines}
 
-Curves that passes through data points in a sequence can be termed interpolating splines. A good interpolating spline is a smooth curve that results from sparse data points. There are a huge variety  of interpolating curves. As mentioned earlier, the nature of smooth interpolating splines have been studied by Ralph Levian in his thesis, “From Spiral to Spline: Optimal Techniques in Interactive Curve Design”\cite{levian}.
+Curves that passes through data points in a sequence can be termed interpolating splines. A good interpolating spline is a smooth curve that results from sparse data points. There are a huge variety  of interpolating curves that include spiral splines, minimum energy curves, log aesthetic curves etc. As mentioned earlier, the nature of smooth interpolating splines have been studied by Ralph Levian in his thesis, “From Spiral to Spline: Optimal Techniques in Interactive Curve Design”\cite{levian}.
 
-According to Levian, spiral spline curves have certain characteristics which make them particularly suitable for two dimensional curve fitting.
+According to Levian, spiral spline interpolating curves have certain characteristics which make them particularly suitable for two dimensional curve fitting.
 \begin{itemize}
+	
 	\item Roundness Property:  When spiral spline curves are used for interpolation, three data points on a circular path would yield that exact circle after interpolation.
 	\item Extensionality Property: When a new control point is introduced on the interpolated spline between two points, the curve shape would be preserved.
 \end{itemize}
 
-Every curve segment in a second order continuous interpolating spiral spline between adjacent control points can be cut from an Euler’s spiral subjecting to rotation, scaling, translation and mirror image transformations. Levian calls Euler’s spiral as the generating curve for spiral splines. Euler’s spiral is a spiral whose curvature changes linearly with its curve length. See Figure.\ref{eulerspiral}. Additionally the spiral spline curves can be defined with curvature countinuity upto fourth order. Even a second order continuity of curvature at data points will be sufficient for good perceptive smoothness.
-
+The continuity in variation of the curvature of a curve is an indicator of its fairness. Parameterized polygons are continuous only in $G^0$, their curvature has a first derivative everywhere, the basic property of connected curves. Spline curves with $G^1$ continuity have a second derivative everywhere. Spiral splines can be defined with $G^2$ continuity has a third derivative everywhere indicating very smooth variation in curvature. 
+ 
+ Levian proposes that every curve segment in a second order continuous interpolating spiral spline between adjacent control points can be cut from an Euler spiral subjecting to rotation, scaling, translation and mirror image transformations. He calls Euler spiral as the generating curve for spiral splines. Euler spiral has a curvature that changes linearly with its curve length. See Figure.\ref{eulerspiral} for a Euler spiral.
 
 
 \begin{figure}
