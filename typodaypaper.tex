@@ -81,7 +81,7 @@ Digital typefaces of  Malayalam script introduced during 19s were non-standard o
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/2011-Malayalam-Textbook.png}
-	\caption{Malayalam Text book in 2011}
+	\caption{Malayalam Text book in 2011. ASCII based font.}
 	\label{maltextbook}
 \end{figure}
 
@@ -103,11 +103,17 @@ Digital typefaces of  Malayalam script introduced during 19s were non-standard o
 
 \section{Curve Interpolation by Spiral splines}
 
-Curves that passes through data points in a sequence can be termed interpolating splines. A good interpolating spline is a smooth curve that results from sparse data points. There are a huge variety  of interpolating curves. As mentioned earlier, the nature of smooth interpolating splines have been studied by Ralph Levian in his thesis : “From Spiral to Spline: Optimal Techniques in Interactive Curve Design”\cite{levian}.
+Curves that passes through data points in a sequence can be termed interpolating splines. A good interpolating spline is a smooth curve that results from sparse data points. There are a huge variety  of interpolating curves. As mentioned earlier, the nature of smooth interpolating splines have been studied by Ralph Levian in his thesis, “From Spiral to Spline: Optimal Techniques in Interactive Curve Design”\cite{levian}.
 
-According to Levian, spiral spline curves have certain characteristics which make them particularly suitable for two dimensional curve fitting. When spiral spline curves are used for interpolation, three data points on a circular path would yield that exact circle after interpolation: this is the property of roundness. When a new control point is introduced on the interpolated spline between two points, the curve shape would be preserved: this is the property of extensionality. Additionally the spiral spline curves can be defined with curvature countinuity upto fourth order. Even a second order continuity of curvature at data points will be sufficient for good perceptive smoothness.
+According to Levian, spiral spline curves have certain characteristics which make them particularly suitable for two dimensional curve fitting.
+\begin{itemize}
+	\item Roundness Property:  When spiral spline curves are used for interpolation, three data points on a circular path would yield that exact circle after interpolation.
+	\item Extensionality Property: When a new control point is introduced on the interpolated spline between two points, the curve shape would be preserved.
+\end{itemize}
 
-Every curve segment in a second order continuous interpolating spiral spline between adjacent control points can be cut from an Euler’s spiral subjecting to rotation, scaling, translation and mirror image transformations. Levian calls Euler’s spiral as the generating curve for spiral splines. Euler’s spiral is a spiral whose curvature changes linearly with its curve length. See Figure.\ref{eulerspiral}. 
+Every curve segment in a second order continuous interpolating spiral spline between adjacent control points can be cut from an Euler’s spiral subjecting to rotation, scaling, translation and mirror image transformations. Levian calls Euler’s spiral as the generating curve for spiral splines. Euler’s spiral is a spiral whose curvature changes linearly with its curve length. See Figure.\ref{eulerspiral}. Additionally the spiral spline curves can be defined with curvature countinuity upto fourth order. Even a second order continuity of curvature at data points will be sufficient for good perceptive smoothness.
+
+
 
 \begin{figure}
 	\centering
