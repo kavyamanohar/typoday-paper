@@ -1,5 +1,6 @@
 \usepackage{color}
 %\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[document]{ragged2e}
 \usepackage{courier}
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
@@ -11,6 +12,27 @@
 \usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage{xcolor}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=25mm,
+ top=25mm,
+ right=25mm,
+ bottom=25mm
+ }
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+	\begin{flushleft}
+	\Large\textbf{\@title}\\
+	\small{\@author}
+	\end{flushleft}
+	\egroup
+}
+\makeatother
+
 \definecolor{dark-red}{rgb}{0.4,0.15,0.15}
 \definecolor{dark-blue}{rgb}{0.15,0.15,0.8}
 \definecolor{medium-blue}{rgb}{0,0,0.5}
@@ -19,14 +41,12 @@
     citecolor={dark-blue}, urlcolor={medium-blue}
 }
 
-\setromanfont[BoldFont={Gentium Basic Bold},ItalicFont={Gentium Italic}]{Gentium}
-\newfontfamily\rachana{Chilanka}
+\setromanfont[BoldFont={Trebuchet MS Bold},ItalicFont={Trebuchet MS Italic}]{Trebuchet MS}
 \newfontfamily\manjari{Manjari}
-\newfontfamily\raghu{Noto Sans Malayalam}
 
 \linespread{1.2}
-\widowpenalty=10000
-\clubpenalty=10000
-\raggedbottom
-\sloppy
-\lefthyphenmin=3
+%\widowpenalty=10000
+%\clubpenalty=10000
+%\raggedbottom
+%\sloppy
+%\lefthyphenmin=3

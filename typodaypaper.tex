@@ -1,39 +1,33 @@
-\documentclass[10pt]{article}
+\documentclass[11pt,twoside,a4paper]{article}
 \usepackage{typoday18}
 
 \title{Spiral splines in typeface design - A case study of Manjari Malayalam typeface}
 
-\author{ 
- Santhosh Thottingal
- \and
- Kavya Manohar
+\author{%
+Santhosh Thottingal, Swathanthra Malayalam Computing, santhosh.thottingal@gmail.com\\
+Kavya Manohar, Swathanthra Malayalam Computing, sakhi.kavya@gmail.com
 }
- 
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-
-Manjari typeface was an experiment to use spiral splines to define the curves of Malayalam glyphs. It was a milestone in the progression of script towards maximally rounded glyphs. The script has been evolving from its rectangular characteristics in the early days of metallic types to the circular characteristics of popular digital fonts. 
+\textbf{Abstract}: Manjari typeface was an experiment to use spiral splines to define the curves of Malayalam glyphs. It was a milestone in the progression of script towards maximally rounded glyphs. The script has been evolving from its rectangular characteristics in the early days of metallic types to the circular characteristics of popular digital fonts. 
 
 The design of curves in Manjari are theoretically based on the PhD thesis by Raph Levien - ``From Spiral to Spline: Optimal Techniques in Interactive Curve Design” \cite{levien}. The design process relied almost entirely on the spiro toolbox developed by Levien himself, available as free software library in Inkscape vector graphics editor.
 
 The use of spiral spline curves resulted in shapes that are extra smooth. The spiral smoothness of curves are complemented by rounded terminals which gives very soft feeling for the eyes. The rigidness of geometric fonts is completely avoided giving a good humanist identity. The curve perfection resulted in negative spaces that acquired beautiful leaf and drop shapes between the bowls and loops of the script. 
 
 In this paper we present the design principles and aesthetic concepts behind this font along with a perspective on the evolution of script aesthetics from the ancient writing systems, through early and contemporary printing to digital fonts. We will also discuss the popularity and adoption of Manjari in the digital as well as print media.
-\end{abstract}
 
-\textbf{Keywords:} Malayalam, Script, Spirals, Opentype, Typeface, Digital Typography
+\textbf{Keywords: Malayalam, Script, Spirals, Opentype, Typeface, Digital Typography}
 
 \section{Introduction}
 
-Malayalam script, since its evolution from Brahmi\footnote{\url{https://www.britannica.com/topic/Brahmi}} writing style through Vattezhuthu and Grantha\footnote{\url{https://www.britannica.com/topic/Grantha-alphabet}} writing systems to the digital typefaces of modern era, has undergone a lot of changes. The noticeable aesthetic feature of contemporary script is its loops and curly strokes. Horizontal symmetry for many letters like {\rachana {ക, ത, ന}} are a part of script's identity. Manjari Malayalam typeface utilises spiral shapes to accentuate these features leading to its aesthetic acceptance. A sample of text rendered in Manjari typeface is shown in Figure \ref{wordcloud}.
+Malayalam script, since its evolution from Brahmi\footnote{\url{https://www.britannica.com/topic/Brahmi}} writing style through Vattezhuthu and Grantha\footnote{\url{https://www.britannica.com/topic/Grantha-alphabet}} writing systems to the digital typefaces of modern era, has undergone a lot of changes. The noticeable aesthetic feature of contemporary script is its loops and curly strokes. Horizontal symmetry for many letters like {\manjari{ക, ത, ന}} are a part of script's identity. Manjari Malayalam typeface utilises spiral shapes to accentuate these features leading to its aesthetic acceptance. A sample of text rendered in Manjari typeface is shown in Figure \ref{wordcloud}.
 
 
 \begin{figure}[h!]
-	%\centering
 	\includegraphics[width=\textwidth]{images/wordcloud.jpg}
 	\caption{Text rendered in Manjari typeface}
 	\label{wordcloud}
@@ -45,7 +39,6 @@ Samples of copper plate inscriptions and palm leaf manuscripts show that the let
 
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=0.6\textwidth]{images/Tharisappalli_copper_plates.jpg}
 	\caption{Copper plate inscription in Vattezhuthu.}
 	\label{vattezhuthu}
@@ -55,7 +48,6 @@ The first ever printed Malayalam book was Samkshepavedartham, printed in Rome us
 
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/samkshepavedartham1772.png}
 	\caption{Samkshepavedartham-1772 shows rectangular nature of glyphs in early print}
 	\label{Samkshepam}
@@ -65,7 +57,6 @@ Next remarkable event in history of Malayalam typefaces occurred when movable ty
 
 
 \begin{figure}
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/newtestament1829.png}
 	\caption{New Testament - 1829}
 	\label{newtestament}
@@ -76,13 +67,12 @@ The acceptance of this style of roundness can be easily understood when a fine h
 
 \subsection{Digital typefaces}
 
-Digital typefaces of Malayalam script introduced during 1990 that were popular in regular printing were mostly rounded. See Figure.\ref{maltextbook}
+Digital typefaces of Malayalam script introduced during 1990 that were popular in regular printing were mostly rounded. See Figure.\ref{malsample}
 
 \begin{figure}
-	\centering
-	\includegraphics[width=0.8\textwidth]{images/2011-Malayalam-Textbook.png}
-	\caption{Malayalam Text book in 2011. ASCII based font.}
-	\label{maltextbook}
+	\includegraphics[width=\textwidth]{images/malayalam-sample.png}
+	\caption{Malayalam Sample text}
+	\label{malsample}
 \end{figure}
 
  
@@ -91,7 +81,6 @@ The most popular unicode fonts since their release in the late 2000s: Rachana, M
 Manjari\footnote{Available at \url{https://smc.org.in/fonts/\#manjari}. The source code is published under open font license at \url{https://gitlab.com/smc/manjari}} typeface is designed by Santhosh Thottingal. This font was released in July 2016 and immediately gained wide popularity among Malayalam speakers. The curves in Manjari are designed to follow a spiral shaped path between its control points and the terminals are rounded. %See Figure.\ref{manjari-ka}.
 
 %\begin{figure}
-%	\centering
 %	\includegraphics[width=0.8\textwidth]{images/Manjari-Ka.png}
 %	\caption{Drawing of letter {\manjari ക} in Manjari font}
 %	\label{manjari-ka}
@@ -117,28 +106,24 @@ Geometric continuity is an essential feature indicating the smoothness of interp
 Spiral splines can be defined with $G^2$ continuity indicating very smooth variation in curvature. 
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=1.0\textwidth]{images/disjoint.png}
 	\caption{Disjoint curves. No continuity.}
 	\label{disjoint}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=1.0\textwidth]{images/g0.png}
 	\caption{$G_0$ continuity. Curves will be continues but there is visible stop point.}
 	\label{g0}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=1.0\textwidth]{images/g1.png}
 	\caption{$G_1$ continuity. The tangents on either sides of join points are essentially the same. Curves will be appear smooth. But there may be sudden changes in the path.}
 	\label{g1}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=1.0\textwidth]{images/g2.png}
 	\caption{$G^2$ continuous curves, having a common center of curvature at the join points. The Spiro library in Inkscape generates $G^2$ curves and same is used for Manjari font.}
 	\label{g2}
@@ -148,7 +133,6 @@ Levien proposes that \textit{every curve segment in a two parameter,  $G^2$ cont
 
 
 \begin{figure}
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/Euler_spiral.png}
 	\caption{Euler Spiral}
 	\label{eulerspiral}
@@ -171,47 +155,79 @@ interpolation here – one for the control points, another for the spline." \cit
 The design of Manjari font was done using free software tools in GNU/Linux operating system. The drawing was done in Inkscape using the Spiro tool\footnote{Spiro library. Spiro is a toolkit for curve design, especially font design, created by Raph Levien. It is integrated with Inkscape and Fontforge. \url{http://www.levien.com/spiro/}}, which implements the optimal curve generation technique outlined by Raph Levien. figure \ref{design-1}, \ref{design-2}, \ref{design-3} and \ref{design-4} illustrates the process.
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/design-1-spiral.png}
 	\caption{Designer draws the bezier path. Spiro tool calculates the optimal curve. Designer adjusts the nodes till the glyph shape is achieved.}
 	\label{design-1}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/design-2-stroke-to-path.png}
 	\caption{The stroke converted to path with desired stroke width. Now this is draft of cubic bezier outline of glyph}
 	\label{design-2}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/design-3-cubic-bezier-in-font-editor.png}
 	\caption{A font editor simplifies and clean up the nodes, defines glyph name, bearings.}
 	\label{design-3}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
 	\includegraphics[width=0.8\textwidth]{images/design-4-final.png}
 	\caption{Final glyph}
 	\label{design-4}
 \end{figure}
 
 Manjari is equal thickness typeface. So bold, thin variants prepared by just varying the stroke with in Inkscape, while stroke is controlled by the curves from Spiro. The outline terminals were set to use round shapes, that complements the smoothness in outlines.
-
+\clearpage
 \section{Specimen}
 
-\includegraphics[width=\textwidth]{images/Manjari-Specimen.pdf}
+\includegraphics[width=0.95\textwidth]{images/Manjari-Specimen.pdf}
+
+\clearpage
 
 \section{Popularity}
 
+
+\begin{figure}[h!]
+	\includegraphics[width=0.8\textwidth]{images/manjari-sample-1.png}
+	\caption{Manjari sample}
+	\label{manjari-sample-1}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width=0.8\textwidth]{images/manjari-sample-2.png}
+	\caption{Manjari sample}
+	\label{manjari-sample-2}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width=0.8\textwidth]{images/manjari-sample-3.png}
+	\caption{Manjari sample}
+	\label{manjari-sample-3}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width=0.8\textwidth]{images/manjari-sample-4.png}
+	\caption{Manjari sample}
+	\label{manjari-sample-4}
+\end{figure}
+
+\clearpage
 \section{Conclusion}
 sds
 
+\clearpage
+
 \begin{thebibliography}{11}
-	\bibitem{levien} Raphael Linus Levien, \textit{From Spiral to Spline: Optimal Techniques in Interactive Curve Design}, EECS Department, University of California, Berkeley, 2009
-	\bibitem{babucherian} Babu Cheriyan, \textit{Benjamin Bailiyum Malayala Sahithyavum} {\manjari{(ബെഞ്ചമിൻ ബെയിലിയും മലയാള സാഹിത്യവും}) }, Mahatma Gandhi University, Kottayam, 2008
+
+\bibitem{levien}
+  Raphael Linus Levien,
+  textit{From Spiral to Spline: Optimal Techniques in Interactive Curve Design},
+  EECS Department, University of California, Berkeley,
+  2009
+
+\bibitem{babucherian} Babu Cheriyan, \textit{Benjamin Bailiyum Malayala Sahithyavum} {\manjari{(ബെഞ്ചമിൻ ബെയിലിയും മലയാള സാഹിത്യവും}) }, Mahatma Gandhi University, Kottayam, 2008
 	\bibitem{gupthannair} S. Gupthan Nair, \textit{Gadyam Pinnitta Vazhikal}{\manjari{ (ഗദ്യം പിന്നിട്ട വഴികൾ)} }, DC Books, Kottayam 
 
 	
