@@ -1,5 +1,7 @@
 \documentclass[11pt,twoside,a4paper,parskip=half]{scrartcl}
+
 \usepackage{typoday18}
+
 
 \title{Spiral splines in typeface design}
 \subtitle{A case study of Manjari Malayalam typeface}
@@ -19,9 +21,9 @@ Kavya Manohar, Swathanthra Malayalam Computing, sakhi.kavya@gmail.com
 
 \section{Introduction}
 
-Malayalam script, since its evolution from Brahmi\footnote{\url{https://en.wikipedia.org/wiki/Brahmi_script}} writing style through Vattezhuthu and Grantha\footnote{\url{https://en.wikipedia.org/wiki/Grantha_alphabet}} writing systems to the digital typefaces of modern era, has undergone a lot of changes. The noticeable aesthetic feature of contemporary script is its loops and curly strokes. Horizontal symmetry for many letters like {\manjari{ക, ത, ന}} are a part of script's identity. 
+Malayalam script, since its evolution from Brahmi\footnote{\url{https://en.wikipedia.org/wiki/Brahmi_script}} writing style through Vattezhuthu and Grantha\footnote{\url{https://en.wikipedia.org/wiki/Grantha_alphabet}} writing systems to the digital typefaces of modern era, has undergone a lot of changes. The noticeable aesthetic feature of contemporary script is its loops and curly strokes. Vertical symmetry for many letters like {\manjari{ക, ത, ന}} are a part of script's identity. 
 
-Manjari Malayalam typeface utilises spiral shapes to accentuate these features leading to its aesthetic acceptance. A sample of text rendered in Manjari typeface is shown in Figure \ref{wordcloud}. The use of spiral spline curves resulted in shapes that are extra smooth. The spiral smoothness of curves are complemented by rounded terminals which gives very soft feeling for the eyes. The rigidness of geometric fonts is completely avoided giving a good humanist identity. The curve perfection resulted in negative spaces that acquired beautiful leaf and drop shapes between the bowls and loops of the script. 
+Manjari Malayalam typeface utilises spiral shapes to accentuate these features leading to its aesthetic acceptance. A sample of text rendered in Manjari typeface is shown in Figure \ref{wordcloud}. The use of spiral spline curves results in shapes that are extra smooth. The spiral smoothness of curves are complemented by rounded terminals which gives very soft feeling for the eyes. The rigidness of geometric fonts is completely avoided giving a good humanist identity. The curve perfection results in negative spaces that acquire beautiful leaf and drop shapes between the bowls and loops of the script. 
 
 
 \begin{figure}[h!]
@@ -34,7 +36,7 @@ Manjari Malayalam typeface utilises spiral shapes to accentuate these features l
 
 \subsection{Ancient manuscripts and early printing}
 
-Samples of copper plate inscriptions and palm leaf manuscripts show that the letters were never perfect rounds, but rather rectangular or elongated curves. The sample indicating this is shown in Figure \ref{vattezhuthu} is inscription from Tharisappalli copper plates dating back to 849 AD.
+Samples of copper plate inscriptions and palm leaf manuscripts show that the letters were never perfect rounds, but rather rectangular or elongated curves. The sample indicating this is shown in Figure \ref{vattezhuthu}. It is an inscription from Tharisappalli copper plates dating back to 849 AD.
 
 
 \begin{figure}[h!]
@@ -48,11 +50,11 @@ The first ever printed Malayalam book was Samkshepavedartham\cite{samkshepavedar
 
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{images/samkshepavedartham1772.png}
-	\caption{Samkshepavedartham, 1772. This is the first ever book published Malayalam in movable type. Rectangular nature of glyphs is noticeable}
+	\caption{Samkshepavedartham, 1772. This is the first ever book published in Malayalam with movable type. Rectangular nature of glyphs is noticeable.}
 	\label{Samkshepam}
 \end{figure} 
 
-Next remarkable event in history of Malayalam typefaces occurred when movable types were casted natively in Kerala, India during 1829 by an anglican missionary Benjamin Bailey\cite{babucherian} for CMS Press, Kottayam, Kerala. These metal types were close to perfect round. The popularity of books from this press started to give uniform height proportions to the script. According to Gupthan Nair, Bailey's contributions as a typographer made the curvy style of the Malayalam script popular\cite{gupthannair}. See the most impactful output from the CMS Press Kottayam in Figure.\ref{newtestament}, a translation of the Bible showing rounded nature of the script.
+Next remarkable event in history of Malayalam typefaces occurred when movable types were cast natively in Kerala, India during 1829 by an anglican missionary Benjamin Bailey\cite{babucherian} for CMS Press, Kottayam, Kerala. These metal types were close to perfect round. The popularity of books from this press started to give uniform height proportions to the script. According to Gupthan Nair, Bailey's contributions as a typographer made the curvy style of the Malayalam script popular\cite{gupthannair}. See the most impactful output from the CMS Press Kottayam in Figure \ref{newtestament}, a translation of the New Testament showing rounded nature of the script.
 
 
 \begin{figure}[h!]
@@ -85,6 +87,7 @@ Manjari\footnote{Available at \url{https://smc.org.in/fonts/\#manjari}. The sour
 %	\label{manjari-ka}
 %\end{figure} 
  
+The design principles behind Manjari typeface are discussed in the following section.
 \clearpage
 
 \section{Curve Interpolation by Spiral splines}
@@ -98,7 +101,7 @@ According to Levien, spiral spline interpolating curves have certain characteris
 	\item \textbf{Extensionality Property}: When a new control point is introduced on the interpolated spline between two points, the curve shape would be preserved.
 \end{itemize}
 
-Geometric continuity is an essential feature indicating the smoothness of interpolating curves between control points. The basic property of connected curves is $G^0$ continuity, ie. curves touch at join points as shown in Figure \ref{g0}. An interpolating curve of better smoothness has $G^1$ continuity, meaning the tangents on either sides of join points are essentially the same as shown in Figure \ref{g1}. 
+\textbf{Geometric continuity} is an essential feature indicating the smoothness of interpolating curves. The basic property of connected curves is $G^0$ continuity, ie. curves touch at join points as shown in Figure \ref{g0}. An interpolating curve of better smoothness has $G^1$ continuity, meaning the tangents on either sides of join points are essentially the same as shown in Figure \ref{g1}. 
 
 A still higher order smoothness is offered by $G^2$ continuous curves, having a common center of curvature at the join points as shown in Figure \ref{g2}. Spiral splines can be defined with $G^2$ continuity indicating very smooth variation in curvature. 
 
@@ -110,19 +113,19 @@ A still higher order smoothness is offered by $G^2$ continuous curves, having a 
 
 \begin{figure}[h!]
 	\includegraphics[width=1.0\textwidth]{images/g0.png}
-	\caption{$G_0$ continuity. Curves will be continuous but there is visible stop point.}
+	\caption{$G^0$ continuity. Curves will be continuous but there is visible stop point.}
 	\label{g0}
 \end{figure}
 
 \begin{figure}[h!]
 	\includegraphics[width=1.0\textwidth]{images/g1.png}
-	\caption{$G_1$ continuity. The tangents on either sides of join points are essentially the same. Curves will appear smooth. But there may be sudden changes in the path.}
+	\caption{$G^1$ continuity. The tangents on either sides of join points are essentially the same. Curves will appear smooth. But there may be sudden changes in the path.}
 	\label{g1}
 \end{figure}
 
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{images/g2.png}
-	\caption{$G^2$ continuous curves, having a common center of curvature at the join points. The Spiro library in Inkscape generates $G^2$ curves and same is used for Manjari font.}
+	\caption{$G^2$ continuous curves, having a common center of curvature at the join points. The Spiro library in Inkscape generates $G^2$ curves and the same is used for Manjari typeface.}
 	\label{g2}
 \end{figure}
 
@@ -142,17 +145,17 @@ The Inconsolata monospace humanist latin font known for its clean lines and eleg
 
 \section{Design process}
 
-The design of Manjari font was done using free software tools in GNU/Linux operating system. The drawing was done in Inkscape using the Spiro tool\footnote{Spiro library. Spiro is a toolkit for curve design, especially font design, created by Raph Levien. It is integrated with Inkscape and Fontforge. \url{http://www.levien.com/spiro/}}, which implements the optimal curve generation technique outlined by Raph Levien. figure \ref{design-1}, \ref{design-2}, \ref{design-3} and \ref{design-4} illustrates the process.
+The design of Manjari typeface was done using free software tools in GNU/Linux operating system. The drawing was done in Inkscape using the Spiro tool\footnote{Spiro library. Spiro is a toolkit for curve design, especially font design, created by Raph Levien. It is integrated with Inkscape and Fontforge. \url{http://www.levien.com/spiro/}}, which implements the optimal curve generation technique outlined by Raph Levien. Figures \ref{design-1}, \ref{design-2}, \ref{design-3} and \ref{design-4} illustrates the process.
 
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{images/design-1-spiral.png}
-	\caption{Designer draws the bezier path. Spiro tool calculates the optimal curve. Designer adjusts the nodes till the glyph shape is achieved.}
+	\caption{Designer defines the control points. Spiro tool interpolates the optimal spiral curve between them. Designer adjusts the nodes till desired glyph shape is achieved.}
 	\label{design-1}
 \end{figure}
 
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{images/design-2-stroke-to-path.png}
-	\caption{The stroke converted to path with desired stroke width. Now this is draft of cubic bezier outline of glyph}
+	\caption{The stroke is converted to bezier path with desired stroke width by Spiro library in Inkscape. Now this is the draft of cubic bezier outline of glyph}
 	\label{design-2}
 \end{figure}
 
@@ -161,7 +164,7 @@ The design of Manjari font was done using free software tools in GNU/Linux opera
 	\caption{A font editor simplifies and clean up the nodes, defines glyph name, bearings.}
 	\label{design-3}
 \end{figure}
-
+\clearpage
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{images/design-4-final.png}
 	\caption{Final glyph}
@@ -185,7 +188,7 @@ The typeface also has a matching Latin character set which follows the same desi
 
 \section{Popularity}
 
-Manjari has gained wide popularity in web as well as in print media since in release in July 2016. There are magazines and news portals which use Manjari as a major typeface. Internet memes widely use Manjari. A few samples are shown in Figures \ref{manjari-sample-1}, \ref{manjari-sample-3}, \ref{manjari-sample-4}. 
+Manjari has gained wide popularity in web as well as in print media since in release in July 2016. There are magazines and news portals which use Manjari as a major typeface. Internet memes widely use Manjari. A few samples are shown in Figures \ref{manjari-sample-1}, \ref{manjari-sample-3} and \ref{manjari-sample-4}. 
 
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{images/manjari-sample-1.png}
@@ -216,7 +219,7 @@ Manjari has gained wide popularity in web as well as in print media since in rel
 \clearpage
 \section{Conclusion}
 
-We discussed the design principles and process followed for Manjari typeface. We also discussed how the optimum spiral curve design outlined by Levien is used in the process, which we believe is one of the main factor behind the wide popularity of the typeface in Malayalam.
+We discussed the principles and the process followed in the design of Manjari typeface. We also discussed how the optimum spiral curve design outlined by Levien is used in the process, which we believe is one of the main factor behind the wide popularity of the typeface in Malayalam.
 
 %\clearpage
 
